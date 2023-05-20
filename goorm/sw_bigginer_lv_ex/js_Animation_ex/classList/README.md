@@ -1,4 +1,4 @@
-# classList 메서드 목록
+# js classList 메서드 목록
 - add('classname') classname을 해당 요소에 추가함
 - removeadd('classname') 해당 classname을 지움
 - containsd('classname') 해당 classname이 있는지 boolean 형식으로 반환
