@@ -1,0 +1,45 @@
+html, body { 
+	margin: 0;
+	padding: 0;
+	height: 100vh; 
+}
+
+#sideBar {
+	background-color: skyblue;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	transform: translate3d(-100vw, 0, 0); /*3차원 이동 , 왼쪽으로 숨김*/
+	transition: transform 0.4s ease-in-out;
+}
+
+#sideBar.active {
+	transform: translate3d(0, 0, 0);
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin:0;
+	padding: 1rem;
+}
+
+.nav-link {
+	cursor: pointer;
+	color: #333;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: 0.2s ease-in-out;
+	padding: 0.5rem 0;
+	text-align: center;
+}
+
+.nav-link:hover {
+	color: #fff;
+	transform: translate3d(2px, 2px, 0);
+}
