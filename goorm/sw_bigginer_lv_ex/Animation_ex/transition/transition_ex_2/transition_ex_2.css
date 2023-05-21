@@ -1,0 +1,37 @@
+body{
+	padding: 1rem;
+}
+
+.inputWrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.guide {
+	font-weight: lighter;	
+	color: rgba(0,0,0,0.6);
+	font-size: 0.8rem;
+}
+
+#input {
+  width: 120px;
+	border-radius: 4px;
+	padding: 0.3rem 0.5rem;
+  outline:none; /*아웃라인의 효과가 없어야 함*/
+	border: 2px solid rgba(0,0,0,0.2);
+  transition-property: all;
+	transition-duration: 0.5s;
+	box-sizing: border-box;
+	margin-bottom: 4px;
+}
+
+#input.expand {
+	width: 240px;
+}
+
+
+#input.highlight { /*하이라이팅하는 중요한 부분*/
+	border: 2px solid #467DC6;
+	background-color: #467DC624;
+	box-shadow: 0 0 8px #467DC688;
+}
