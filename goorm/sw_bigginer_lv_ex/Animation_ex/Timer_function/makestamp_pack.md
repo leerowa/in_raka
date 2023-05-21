@@ -25,7 +25,7 @@ let timerId = -1;
 button.addEventListener('click', () => {
 	const isActivated = button.textContent === 'STOP'
   button.textContent =  isActivated ? 'PRINT' : 'STOP';
-	if (isActivated) return clearInterval(timerId);
+	if (isActivated) return clearInterval(timerId); /*if문이 거짓이면 리턴과 밑의 명령이 실행된다. */
 	timerId = setInterval(printText, 1000);
 });
 ```
