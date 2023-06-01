@@ -1,0 +1,138 @@
+/*css Reset*/
+body, ul, p, h1{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    background-image: url(images/bg.png);
+    background-attachment: fixed;
+    background-position: center;
+}
+.wrapper{
+    background-position: center;
+    background-image: url(images/rope.png);
+
+    width:800px;
+    margin: 0 auto 50px;
+}
+.header{
+    text-align: center;
+}
+.logo{
+    background-image: url(images/logo.png);
+    width: 450px;
+    height: 140px;
+    margin : 20px 0;
+    display: inline-block;
+    text-indent:-9999px;
+    /*Image Replacement 기법 */
+
+}
+.menu{
+    width:300px;
+    margin:30px auto;
+    color:#666
+}
+.menu li{
+    margin-bottom:8px;
+}
+.menu li a{
+    border :3px solid ;
+    border-radius: 5px;
+    padding:5px 0;
+    display:block;
+    /*width는 부모에게 주고 블럭요소를 주면 클릭 할 범위 증가
+    width에 꽉채워진다*/
+}
+.menu li a:hover{
+    color:orange;
+}
+
+.section{
+    background-image: url(images/wood.png);
+    margin:50px 0;
+    padding:30px;
+    border: 10px solid #3f2217;
+    color:antiquewhite;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 10px rgba(0,0,0,0.6);
+}
+
+
+.section h1{
+    margin-bottom:20px;
+    font-size: 80px;
+    line-height: 174px;
+    font-family: 'Merienda', cursive;
+    background-repeat: no-repeat;
+    
+    background-position: right center;
+}
+.section p{
+    line-height: 1.6;
+}
+.section p strong{
+    background-color: #3f2217;
+    padding : 0px 20px;
+    border-radius: 10px;
+    color:orange;
+}
+.section:nth-child(even) h1{
+    background-position: left center;
+    text-align: right;
+
+}
+.section h1.animal01{
+    background-image: url(images/animal01.png);
+}
+.section h1.animal02{
+    background-image: url(images/animal02.png);
+    color:pink;
+}
+.section h1.animal03{
+    background-image: url(images/animal03.png);
+    color:#ddd;
+}
+.section h1.animal04{
+    background-image: url(images/animal04.png);
+    color:orangered;
+}
+.section h1.animal05{
+    background-image: url(images/animal05.png);
+    color:antiquewhite;
+}
+.section h1.animal06{
+    background-image: url(images/animal06.png);
+    color:blue;
+}
+.section h1.animal07{
+    background-image: url(images/animal07.png);
+    color:orange;
+}
+
+.footer{
+    background-color: #7d410d;
+    color: antiquewhite;
+    text-align: center;
+    border-bottom :10px solid rgba(0,0,0,0.4);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.footer:before{
+    content:'';
+    background-image: url(images/ground.png);
+    background-repeat: repeat-x;
+    display:block;
+    height:50px; /*잔디의 크기가 50px이다*/
+}
+.footer p{
+    padding: 20px 0;
+}
