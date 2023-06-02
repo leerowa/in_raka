@@ -1,0 +1,133 @@
+body, h1, p{
+    margin:0;
+}
+body{
+    background-color: #999;
+}
+.clearfix::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.wrapper{
+
+    width:1000px;
+    margin: 150px auto;
+    /*overflow:hidden;float로 뜬 브라우저 기준 */
+}
+.sidebar, .content{
+    border-radius: 5px;
+    background-color: white;
+}
+.sidebar{
+    float:right;
+    width:250px;
+    margin-left: 20px;
+    text-align: center;
+    color: #555;
+}
+.content{
+   padding:30px;
+   background-color:white;
+    /*display:flow-root;* 아직 실행이 안되는 웹브라우저가 많다*/
+    overflow:hidden; /*float로 뜬 브라우저 기준으로 맞춤 */
+}
+.sidebar-section{
+    margin: 20px 0;
+}
+.cover{
+    width:100%;
+    margin-top: -100px;
+}
+.title{
+    line-height: 1;
+    color:#6797b2;
+}
+.price::before{
+    content:'$';
+    font-size:0.7em;
+    margin-right:0.2em;
+    vertical-align: middle;
+    opacity: 0.5;
+}
+.button{
+   background-color:#6797b2;
+   color:white;
+   display: block;
+   margin:5px 20px;
+   padding:12px 0 10px 0;
+   font-weight: bold;
+   letter-spacing: 0.2em;
+   text-indent:0.2em;
+}
+.button.share{
+    background-color: #999;
+}
+.section{
+    margin-bottom: 20px;
+}
+.section:last-child{
+    margin-bottom: 0;
+}
+.section h2{
+    color:#6797b2;
+    border-bottom: 2px solid #ddd 
+}
+.message{
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.message:last-child{
+    margin-bottom: 0;
+}
+.message-profile{
+    float:left;
+}
+.message.answer .message-profile{
+    float:right;
+}
+.message-profile img{
+    border-radius: 50px;
+}
+.message-profile::before,
+.message-profile::after,
+.message-profile img{
+    vertical-align: middle;
+}
+
+.message-profile.q::after,
+.message-profile.a::before
+{
+    content:"";
+    display: inline-block;
+    border: 10px solid transparent;
+    border-color: transparent #ddd transparent transparent;
+}
+.message-profile.a::before{
+    border-color: transparent transparent transparent #ddd  ;
+
+}
+.message-content{
+    overflow: hidden;
+    background-color: #ddd;
+    padding:20px;
+}
+
+.star::before,
+.star{
+    display: inline-block;
+    width:150px;
+    height:30px;
+    background-image: url(images/star-sprite.png);
+    overflow: hidden;
+}
+.star::before{
+    content:'';
+    display: block;
+    background-position: left bottom;
+}
+.star.s01::before{ width:20%}
+.star.s02::before{ width:40%}
+.star.s03::before{ width:60%}
+.star.s04::before{ width:80%}
+.star.s05::before{ width:100%}
