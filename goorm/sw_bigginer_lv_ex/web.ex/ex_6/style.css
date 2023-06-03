@@ -1,0 +1,94 @@
+/*css reset*/
+body, h1, h2, p{
+    margin:0;
+}
+h1{
+    font-size: 100%;
+}
+/*html, body{
+height:100%; 옛날엔 꽉 채우기 위해 부모요소 전부를 창 크기 꽉차게 만듬
+}*/
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+body{
+    background-color: #ddd;
+}
+.cover{
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color:white;
+    height: 50vh; /*viewport height 보는 창 기준으로 만듬*/
+    font-size: 10vh;
+    position: relative;
+}
+.cover h1{
+    background-color: orangered;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    padding:0em 0.4em 0.15em;/*폰트가 고정되지 않으면  의미 없음*/
+
+    line-height: 1;
+}
+.wrapper{
+    
+    width:1000px;
+    margin:50px auto;
+}
+.section{
+    background-color: white;
+    margin: 50px auto;
+    padding:20px;
+    text-align: right;
+    position:relative;
+}    
+.section-content{
+    display: inline-block;
+}
+.section h2{
+    margin-bottom: 20px;
+    font-size: 40px;
+    border-bottom: 15px solid ;
+    display: inline-block;
+}
+.section.strawberry h2{
+    color:orangered;
+    border-color: forestgreen;
+}
+.section.orange h2 {
+    color: orange;
+    border-color: antiquewhite;
+}
+.section.kiwi h2{
+    color: forestgreen;
+    border-color: #c78c8c ;
+}
+.section p{
+    float: left;
+    width: 250px;
+    margin-right: 20px;
+    line-height: 1.6;
+}
+.section p:last-child{
+    margin:0;
+}
+.section-cover{
+    position: absolute;
+    left:0;
+    top:50%;
+    margin: 0 -100px;
+    transform: translateY(-50%);
+}
+.section:nth-child(even) .section-cover{
+    left:auto;
+    right:0;
+}
+.section:nth-child(even) {
+    text-align: left;
+}
